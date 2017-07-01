@@ -30,6 +30,8 @@ class XMPPStreamManager:NSObject {
         return autoPing
     }()
     
+    
+    /// 好友管理
     lazy var roster: XMPPRoster = {
         let roster = XMPPRoster(rosterStorage: XMPPRosterCoreDataStorage.sharedInstance(), dispatchQueue: DispatchQueue.global())!
         // 不清除用户数据
@@ -38,6 +40,23 @@ class XMPPStreamManager:NSObject {
         roster.autoAcceptKnownPresenceSubscriptionRequests = false
         
         return roster
+    }()
+    
+    
+    /// 消息管理
+    lazy var messageArchiving: XMPPMessageArchiving = {
+        var messageArchiving = XMPPMessageArchiving(messageArchivingStorage: XMPPMessageArchivingCoreDataStorage.sharedInstance(), dispatchQueue: DispatchQueue.global())!
+        
+        return messageArchiving
+    }()
+    
+    /// 个人资料
+    let vCard = XMPPvCardTempModule(vCardStorage: XMPPvCardCoreDataStorage.sharedInstance(), dispatchQueue: DispatchQueue.main)!
+    
+    /// 指定用户资料
+    lazy var vCardAvatar: XMPPvCardAvatarModule = { [unowned self] in
+        let vCardAvatar = XMPPvCardAvatarModule(vCardTempModule: self.vCard, dispatchQueue: DispatchQueue.main)!
+        return vCardAvatar
     }()
     
     let serverAddr = "localhost"
@@ -52,16 +71,22 @@ class XMPPStreamManager:NSObject {
         xmppStream.hostPort = 5222
         // 设置代理 多播代理
         xmppStream.addDelegate(self, delegateQueue: DispatchQueue.main)
+        
     }
     
     
     /// 激活组件
     func activate() {
         reconnect.activate(xmppStream)
-        autoPing.activate(xmppStream)
+//        autoPing.activate(xmppStream)
         
         roster.addDelegate(self, delegateQueue: DispatchQueue.global())
         roster.activate(xmppStream)
+        
+        messageArchiving.activate(xmppStream)
+        
+        vCard.activate(xmppStream)
+        vCardAvatar.activate(xmppStream)
     }
     
     override init() {
@@ -116,16 +141,16 @@ extension XMPPStreamManager: XMPPStreamDelegate, XMPPRosterDelegate {
     }
     
     func xmppStream(_ sender: XMPPStream!, didReceive message: XMPPMessage!) {
-        print(message.body())
+//        print(message.body())
         
-        let content = UNMutableNotificationContent()
-        content.title = "新消息"
-        content.subtitle = "new message"
-        content.body = message.body()
-        
-        let noti = UNNotificationRequest(identifier: "noti", content: content, trigger: nil)
-        
-        UNUserNotificationCenter.current().add(noti, withCompletionHandler: nil)
+//        let content = UNMutableNotificationContent()
+//        content.title = "新消息"
+//        content.subtitle = "new message"
+//        content.body = message.body()
+//        
+//        let noti = UNNotificationRequest(identifier: "noti", content: content, trigger: nil)
+//        
+//        UNUserNotificationCenter.current().add(noti, withCompletionHandler: nil)
     }
     
     // MARK: - XMPPRosterDelegate

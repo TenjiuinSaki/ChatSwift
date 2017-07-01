@@ -17,19 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         let center = UNUserNotificationCenter.current()
-        let options = UNAuthorizationOptions(rawValue: UNAuthorizationOptions.badge.rawValue |
-            UNAuthorizationOptions.sound.rawValue |
-            UNAuthorizationOptions.alert.rawValue)
-        
-        center.requestAuthorization(options: options) { (_, err) in
+//        let options = UNAuthorizationOptions(rawValue: UNAuthorizationOptions.badge.rawValue |
+//            UNAuthorizationOptions.sound.rawValue |
+//            UNAuthorizationOptions.alert.rawValue)
+        // 消息中心注册消息类型
+        center.requestAuthorization(options: [.badge, .sound, .alert]) { (_, err) in
             if let err = err {
                 print(err.localizedDescription)
             }
         }
         
         center.delegate = self
+        
+        // 登录lisi账号
+        XMPPStreamManager.shareManager.loginToServer(user: "lisi", password: "123")
         
         return true
     }

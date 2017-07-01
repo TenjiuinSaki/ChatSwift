@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563DFE281EFBE9140067E868 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DFE271EFBE9140067E868 /* ContactViewController.swift */; };
+		563DFE2C1EFBEEEA0067E868 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DFE2A1EFBEEEA0067E868 /* ContactTableViewCell.swift */; };
+		563DFE2D1EFBEEEA0067E868 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563DFE2B1EFBEEEA0067E868 /* ContactTableViewCell.xib */; };
+		563DFE2F1EFC07F90067E868 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DFE2E1EFC07F90067E868 /* ChatViewController.swift */; };
+		563DFE321EFC13700067E868 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DFE301EFC13700067E868 /* MessageTableViewCell.swift */; };
+		563DFE331EFC13700067E868 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563DFE311EFC13700067E868 /* MessageTableViewCell.xib */; };
+		565E53591F079AA50098161B /* RecentlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E53581F079AA40098161B /* RecentlyViewController.swift */; };
+		565E535B1F07A20F0098161B /* RecentlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E535A1F07A20F0098161B /* RecentlyTableViewCell.swift */; };
+		565E535D1F07B1330098161B /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E535C1F07B1330098161B /* MeTableViewController.swift */; };
+		565E535F1F07B1440098161B /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E535E1F07B1440098161B /* DetailTableViewController.swift */; };
+		565E53611F07B8F70098161B /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E53601F07B8F70098161B /* UpdateViewController.swift */; };
 		56665F171EF8C75600208511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56665F161EF8C75600208511 /* AppDelegate.swift */; };
 		56665F191EF8C75600208511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56665F181EF8C75600208511 /* ViewController.swift */; };
 		56665F1C1EF8C75600208511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56665F1A1EF8C75600208511 /* Main.storyboard */; };
@@ -18,6 +29,17 @@
 
 /* Begin PBXFileReference section */
 		453760D176B0791811623408 /* Pods-XMPPChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMPPChat/Pods-XMPPChat.release.xcconfig"; sourceTree = "<group>"; };
+		563DFE271EFBE9140067E868 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		563DFE2A1EFBEEEA0067E868 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		563DFE2B1EFBEEEA0067E868 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		563DFE2E1EFC07F90067E868 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		563DFE301EFC13700067E868 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		563DFE311EFC13700067E868 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		565E53581F079AA40098161B /* RecentlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentlyViewController.swift; sourceTree = "<group>"; };
+		565E535A1F07A20F0098161B /* RecentlyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentlyTableViewCell.swift; sourceTree = "<group>"; };
+		565E535C1F07B1330098161B /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
+		565E535E1F07B1440098161B /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		565E53601F07B8F70098161B /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		56665F131EF8C75600208511 /* XMPPChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56665F161EF8C75600208511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56665F181EF8C75600208511 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +73,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		563DFE291EFBEEBB0067E868 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				563DFE2A1EFBEEEA0067E868 /* ContactTableViewCell.swift */,
+				563DFE2B1EFBEEEA0067E868 /* ContactTableViewCell.xib */,
+				563DFE301EFC13700067E868 /* MessageTableViewCell.swift */,
+				563DFE311EFC13700067E868 /* MessageTableViewCell.xib */,
+				565E535A1F07A20F0098161B /* RecentlyTableViewCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		56665F0A1EF8C75600208511 = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +106,20 @@
 		56665F151EF8C75600208511 /* XMPPChat */ = {
 			isa = PBXGroup;
 			children = (
+				563DFE291EFBEEBB0067E868 /* TableViewCell */,
 				56665F281EF8CB8500208511 /* Tools */,
 				56665F161EF8C75600208511 /* AppDelegate.swift */,
 				56665F181EF8C75600208511 /* ViewController.swift */,
+				563DFE271EFBE9140067E868 /* ContactViewController.swift */,
+				563DFE2E1EFC07F90067E868 /* ChatViewController.swift */,
+				565E53581F079AA40098161B /* RecentlyViewController.swift */,
 				56665F1A1EF8C75600208511 /* Main.storyboard */,
 				56665F1D1EF8C75600208511 /* Assets.xcassets */,
 				56665F1F1EF8C75600208511 /* LaunchScreen.storyboard */,
 				56665F221EF8C75600208511 /* Info.plist */,
+				565E535C1F07B1330098161B /* MeTableViewController.swift */,
+				565E535E1F07B1440098161B /* DetailTableViewController.swift */,
+				565E53601F07B8F70098161B /* UpdateViewController.swift */,
 			);
 			path = XMPPChat;
 			sourceTree = "<group>";
@@ -161,7 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563DFE2D1EFBEEEA0067E868 /* ContactTableViewCell.xib in Resources */,
 				56665F211EF8C75600208511 /* LaunchScreen.storyboard in Resources */,
+				563DFE331EFC13700067E868 /* MessageTableViewCell.xib in Resources */,
 				56665F1E1EF8C75600208511 /* Assets.xcassets in Resources */,
 				56665F1C1EF8C75600208511 /* Main.storyboard in Resources */,
 			);
@@ -222,9 +265,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565E535B1F07A20F0098161B /* RecentlyTableViewCell.swift in Sources */,
+				565E535F1F07B1440098161B /* DetailTableViewController.swift in Sources */,
+				565E535D1F07B1330098161B /* MeTableViewController.swift in Sources */,
+				563DFE321EFC13700067E868 /* MessageTableViewCell.swift in Sources */,
 				56665F191EF8C75600208511 /* ViewController.swift in Sources */,
+				563DFE2C1EFBEEEA0067E868 /* ContactTableViewCell.swift in Sources */,
+				563DFE281EFBE9140067E868 /* ContactViewController.swift in Sources */,
+				565E53591F079AA50098161B /* RecentlyViewController.swift in Sources */,
 				56665F171EF8C75600208511 /* AppDelegate.swift in Sources */,
+				563DFE2F1EFC07F90067E868 /* ChatViewController.swift in Sources */,
 				56665F2A1EF8DB7B00208511 /* XMPPStreamManager.swift in Sources */,
+				565E53611F07B8F70098161B /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
