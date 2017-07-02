@@ -75,6 +75,10 @@ class RecentlyViewController: UITableViewController {
         des.userJid = contact.bareJid
     }
 
+    @IBAction func addRoom(_ sender: Any) {
+        let jid = XMPPJID(user: "ios", domain: "iosserver.localhost", resource: nil)
+        XMPPMUCManager.shareManager.joinOrCreateRoom(roomjid: jid!, nickname: "lisi")
+    }
 }
 
 // MARK: - 好友更改头像

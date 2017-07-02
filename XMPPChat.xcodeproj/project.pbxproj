@@ -24,6 +24,7 @@
 		56665F1E1EF8C75600208511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56665F1D1EF8C75600208511 /* Assets.xcassets */; };
 		56665F211EF8C75600208511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56665F1F1EF8C75600208511 /* LaunchScreen.storyboard */; };
 		56665F2A1EF8DB7B00208511 /* XMPPStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56665F291EF8DB7B00208511 /* XMPPStreamManager.swift */; };
+		567057FC1F08C0EF0064A06D /* XMPPMUCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567057FB1F08C0EF0064A06D /* XMPPMUCManager.swift */; };
 		7A5FC1F7D18D2AD9D8D31C03 /* Pods_XMPPChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61E371DB9801D3BC0FF7AA7 /* Pods_XMPPChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		56665F201EF8C75600208511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56665F221EF8C75600208511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56665F291EF8DB7B00208511 /* XMPPStreamManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMPPStreamManager.swift; sourceTree = "<group>"; };
+		567057FB1F08C0EF0064A06D /* XMPPMUCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMPPMUCManager.swift; sourceTree = "<group>"; };
 		612CA64932D7B7EA8ABA0F98 /* Pods-XMPPChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMPPChat/Pods-XMPPChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D61E371DB9801D3BC0FF7AA7 /* Pods_XMPPChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMPPChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				56665F291EF8DB7B00208511 /* XMPPStreamManager.swift */,
+				567057FB1F08C0EF0064A06D /* XMPPMUCManager.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				565E535F1F07B1440098161B /* DetailTableViewController.swift in Sources */,
 				565E535D1F07B1330098161B /* MeTableViewController.swift in Sources */,
 				563DFE321EFC13700067E868 /* MessageTableViewCell.swift in Sources */,
+				567057FC1F08C0EF0064A06D /* XMPPMUCManager.swift in Sources */,
 				56665F191EF8C75600208511 /* ViewController.swift in Sources */,
 				563DFE2C1EFBEEEA0067E868 /* ContactTableViewCell.swift in Sources */,
 				563DFE281EFBE9140067E868 /* ContactViewController.swift in Sources */,

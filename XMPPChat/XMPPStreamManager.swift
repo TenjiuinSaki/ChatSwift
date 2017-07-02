@@ -10,7 +10,7 @@ import UIKit
 import XMPPFramework
 import UserNotifications
 
-class XMPPStreamManager:NSObject {
+class XMPPStreamManager: NSObject {
     static let shareManager = XMPPStreamManager()
     
 
@@ -58,6 +58,7 @@ class XMPPStreamManager:NSObject {
         let vCardAvatar = XMPPvCardAvatarModule(vCardTempModule: self.vCard, dispatchQueue: DispatchQueue.main)!
         return vCardAvatar
     }()
+    
     
     let serverAddr = "localhost"
     

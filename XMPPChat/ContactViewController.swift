@@ -43,6 +43,7 @@ class ContactViewController: UITableViewController {
         let nib = UINib(nibName: "ContactTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "contact_cell")
         tableView.rowHeight = 85
+        tableView.tableFooterView = UIView()
         
         fetchController.delegate = self
         do {

@@ -27,7 +27,7 @@ class UpdateViewController: UIViewController {
         
         switch type {
         case .nickname:
-            title = "修改昵称"
+            title = "昵称"
         case .desc:
             title = "个性签名"
         }

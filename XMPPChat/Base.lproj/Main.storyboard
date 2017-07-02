@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-868" y="349"/>
         </scene>
-        <!--聊天列表-->
+        <!--聊天记录-->
         <scene sceneID="TVq-UF-odD">
             <objects>
                 <tableViewController id="rkW-cn-X9W" customClass="RecentlyViewController" customModule="XMPPChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,13 @@
                             <outlet property="delegate" destination="rkW-cn-X9W" id="of9-zl-4AF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="聊天列表" id="sF5-N6-O9F"/>
+                    <navigationItem key="navigationItem" title="聊天记录" id="sF5-N6-O9F">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="dPg-3y-EiM">
+                            <connections>
+                                <action selector="addRoom:" destination="rkW-cn-X9W" id="7xz-TT-VJP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="TRc-1T-0i3" kind="show" identifier="chat_segue" id="lGd-Ne-0bH"/>
                     </connections>
@@ -143,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="714.69265367316348"/>
         </scene>
-        <!--个人资料-->
+        <!--个人中心-->
         <scene sceneID="1jC-Rt-6Vu">
             <objects>
                 <tableViewController id="99w-DX-bbQ" customClass="MeTableViewController" customModule="XMPPChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,7 +216,7 @@
                             <outlet property="delegate" destination="99w-DX-bbQ" id="aXs-aN-otn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="个人资料" id="YLa-60-Pfc"/>
+                    <navigationItem key="navigationItem" title="个人中心" id="YLa-60-Pfc"/>
                     <connections>
                         <outlet property="avatar" destination="ze5-xO-sGX" id="in7-Vm-0fC"/>
                         <outlet property="descLabel" destination="4a9-ss-WV0" id="leG-6v-HxV"/>
@@ -222,19 +228,19 @@
             </objects>
             <point key="canvasLocation" x="1088.8" y="1405.5472263868066"/>
         </scene>
-        <!--Detail Table View Controller-->
+        <!--个人资料-->
         <scene sceneID="fOS-K1-OOr">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="wH4-AR-IV6" customClass="DetailTableViewController" customModule="XMPPChat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="个人资料" hidesBottomBarWhenPushed="YES" id="wH4-AR-IV6" customClass="DetailTableViewController" customModule="XMPPChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="CDd-qr-rpR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="Amy-Z2-3jE">
+                            <tableViewSection headerTitle="" id="Amy-Z2-3jE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="92" id="erJ-4q-b3q">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="92"/>
+                                        <rect key="frame" x="0.0" y="35" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erJ-4q-b3q" id="KnP-dh-wl9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
@@ -260,10 +266,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="8ho-CZ-1UN">
+                            <tableViewSection headerTitle="" id="8ho-CZ-1UN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="vuP-7H-het">
-                                        <rect key="frame" x="0.0" y="203.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="163" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vuP-7H-het" id="89c-Y3-jh0">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -283,7 +289,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="dKb-ik-cTE">
-                                        <rect key="frame" x="0.0" y="247.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="207" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dKb-ik-cTE" id="Aw3-b9-phu">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -302,14 +308,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="Qcw-6q-Wzg">
-                                        <rect key="frame" x="0.0" y="291.5" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Qcw-6q-Wzg">
+                                        <rect key="frame" x="0.0" y="251" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qcw-6q-Wzg" id="zIO-ab-iJj">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-na-b0E">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-na-b0E">
                                                     <rect key="frame" x="28" y="11.5" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -393,11 +399,11 @@
             </objects>
             <point key="canvasLocation" x="2605.5999999999999" y="1405.5472263868066"/>
         </scene>
-        <!--Item-->
+        <!--我-->
         <scene sceneID="wkk-Vh-k9A">
             <objects>
                 <navigationController id="d3N-BA-AoT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MhX-ev-BCe"/>
+                    <tabBarItem key="tabBarItem" title="我" id="MhX-ev-BCe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Lz-Fo-JiY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -478,11 +484,11 @@
             </objects>
             <point key="canvasLocation" x="2309.5999999999999" y="294.60269865067471"/>
         </scene>
-        <!--Item-->
+        <!--最近-->
         <scene sceneID="qGw-OR-V5x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bmy-Kg-5iP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BEo-fe-vjy"/>
+                    <tabBarItem key="tabBarItem" title="最近" id="BEo-fe-vjy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rln-Bn-GDV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -497,11 +503,11 @@
             </objects>
             <point key="canvasLocation" x="140" y="-47.226386806596707"/>
         </scene>
-        <!--Item-->
+        <!--好友-->
         <scene sceneID="3Yc-Sd-qIz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9zb-LY-dqi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aHq-3c-6aw"/>
+                    <tabBarItem key="tabBarItem" title="好友" id="aHq-3c-6aw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FC5-DV-t9n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
